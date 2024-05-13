@@ -25,7 +25,7 @@ namespace ConsoleApp1
     internal class Program
     {
         List<Task> tasks=new List<Task>();
-        public void add() {
+        void add() {
             
            
             Console.WriteLine("Please enter Task Title:");
@@ -40,7 +40,7 @@ namespace ConsoleApp1
 
         }
 
-        public void display() {
+        void display() {
 
             if (tasks.Count == 0)
             {
@@ -55,7 +55,7 @@ namespace ConsoleApp1
             }
         }
 
-        public void update()
+        void update()
         {
           
             display();
@@ -81,7 +81,7 @@ namespace ConsoleApp1
 
         }
 
-        public void remove()
+        void remove()
         {
             display() ;
 
@@ -99,6 +99,7 @@ namespace ConsoleApp1
             }
 
         }
+        
         
         
         static void Main(string[] args)

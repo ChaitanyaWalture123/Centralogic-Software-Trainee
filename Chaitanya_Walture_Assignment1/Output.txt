@@ -1,0 +1,92 @@
+Task List Application
+1. Create a task
+2. Read tasks
+3. Update a task
+4. Delete a task
+5. Exit
+Enter your choice: 1
+Please enter Task Title:
+Study
+Please enter Task Discriptiom:
+DSA
+Task Added Sucessfully
+Task List Application
+1. Create a task
+2. Read tasks
+3. Update a task
+4. Delete a task
+5. Exit
+Enter your choice: 1
+Please enter Task Title:
+Playing
+Please enter Task Discriptiom:
+Cricket
+Task Added Sucessfully
+Task List Application
+1. Create a task
+2. Read tasks
+3. Update a task
+4. Delete a task
+5. Exit
+Enter your choice: 1
+Please enter Task Title:
+Work
+Please enter Task Discriptiom:
+Centralogic
+Task Added Sucessfully
+Task List Application
+1. Create a task
+2. Read tasks
+3. Update a task
+4. Delete a task
+5. Exit
+Enter your choice: 2
+1 | Task Title : Study | Discription : DSA
+2 | Task Title : Playing | Discription : Cricket
+3 | Task Title : Work | Discription : Centralogic
+Task List Application
+1. Create a task
+2. Read tasks
+3. Update a task
+4. Delete a task
+5. Exit
+Enter your choice: 3
+1 | Task Title : Study | Discription : DSA
+2 | Task Title : Playing | Discription : Cricket
+3 | Task Title : Work | Discription : Centralogic
+Enter the task number to update
+3
+Enter the task title to be updated with
+Assignmemt
+Enter the task discription to be updated with
+Centralogic
+Task updated successfully.
+Task List Application
+1. Create a task
+2. Read tasks
+3. Update a task
+4. Delete a task
+5. Exit
+Enter your choice: 4
+1 | Task Title : Study | Discription : DSA
+2 | Task Title : Playing | Discription : Cricket
+3 | Task Title : Assignmemt | Discription : Centralogic
+Please enter Task Title You Want To delete:
+Playing
+Task deleted Sucessfull !
+Task List Application
+1. Create a task
+2. Read tasks
+3. Update a task
+4. Delete a task
+5. Exit
+Enter your choice: 2
+1 | Task Title : Study | Discription : DSA
+2 | Task Title : Assignmemt | Discription : Centralogic
+Task List Application
+1. Create a task
+2. Read tasks
+3. Update a task
+4. Delete a task
+5. Exit
+Enter your choice:
