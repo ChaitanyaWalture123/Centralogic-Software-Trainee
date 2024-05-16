@@ -32,9 +32,9 @@ namespace ConsoleApp1
             string title = Console.ReadLine();
 
             Console.WriteLine("Please enter Task Discriptiom:");
-            string discription = Console.ReadLine();
+            string description = Console.ReadLine();
 
-            Task t = new Task(title,discription);
+            Task t = new Task(title,description);
             tasks.Add(t);
             Console.WriteLine("Task Added Sucessfully");
 
@@ -63,15 +63,24 @@ namespace ConsoleApp1
             Console.WriteLine("Enter the task number to update");
             int num = int.Parse(Console.ReadLine());
             int index = num - 1;
-            Console.WriteLine("Enter the task title to be updated with");
-            string title = Console.ReadLine();
-            Console.WriteLine("Enter the task discription to be updated with");
-            string description = Console.ReadLine();
+            Console.WriteLine("Enter the task title to be updated with(leave blank if want to keep as it is)");
+            string newtitle = Console.ReadLine();
+            Console.WriteLine("Enter the task discription to be updated with (leave blank if want to keep as it is)");
+            string newdescription = Console.ReadLine();
 
             if (index >= 0 && index < tasks.Count)
             {
-                tasks[index].title = title;
-                tasks[index].description = description;
+                if (newtitle != null)
+                {
+
+                    tasks[index].title = newtitle;
+                }
+                if (newdescription != null)
+                {
+
+                    tasks[index].description = newdescription;
+                }
+                
                 Console.WriteLine("Task updated successfully.");
             }
             else
