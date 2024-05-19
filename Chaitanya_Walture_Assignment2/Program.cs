@@ -153,15 +153,23 @@ namespace Chaitanya_Walture_Assignment2
         public void FindById()
         {
             Console.WriteLine("Enter Id id item : ");
-            int id =int.Parse(Console.ReadLine());
-            Item item = items.Find(it => it.getId() == id);
-            if(item != null)
+
+            string ids = Console.ReadLine();
+            if (int.TryParse(ids, out int id))
             {
-              Console.WriteLine(item);
+                Item item = items.Find(it => it.getId() == id);
+                if (item != null)
+                {
+                    Console.WriteLine(item);
+                }
+                else
+                {
+                    Console.WriteLine(" Item not found ");
+                }
             }
             else
             {
-                Console.WriteLine(" Item not found ");
+                Console.WriteLine(" Invalid input ");
             }
         }
         public void Update()
@@ -265,18 +273,25 @@ namespace Chaitanya_Walture_Assignment2
         public void Delete()
         {
             Console.WriteLine("Enter the item id to be deleted");
-            int id = int.Parse(Console.ReadLine());
-            Item item = items.Find(it => it.getId() == id);
-            if(item != null)
+            string ids = Console.ReadLine();
+            if (int.TryParse(ids, out int id))
             {
-                items.Remove(item);
-                Console.WriteLine("Item deleted ");
+                Item item = items.Find(it => it.getId() == id);
+                if (item != null)
+                {
+                    items.Remove(item);
+                    Console.WriteLine("Item deleted ");
 
+                }
+
+                else
+                {
+                    Console.WriteLine("Item not found ");
+                }
             }
-
             else
             {
-                Console.WriteLine("Item not found ");
+                Console.WriteLine("Invalid input");
             }
         }
     }
