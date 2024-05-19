@@ -1,0 +1,119 @@
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option: 1
+Enter Name: face wash
+Enter Price: 100
+Enter Quantity: 2
+Item added successfully
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option: 1
+Enter Name: soap
+Enter Price: 45
+Enter Quantity: 3
+Item added successfully
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option: 1
+Enter Name: oil
+Enter Price: 35
+Enter Quantity: 1
+Item added successfully
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option: 2
+ID: 1, Name: face wash, Price: 100, Quantity: 2
+ID: 2, Name: soap, Price: 45, Quantity: 3
+ID: 3, Name: oil, Price: 35, Quantity: 1
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option: 3
+Enter Id id item :
+3
+ID: 3, Name: oil, Price: 35, Quantity: 1
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option: 4
+Enter the Id of the item to be updated:
+2
+Enter the Item Name (Leave blank if you don't want to change):
+
+Enter the Item Price (Leave blank if you don't want to change):
+0
+Price must be a positive number.
+Enter the Item Price (Leave blank if you don't want to change):
+34
+Enter the Item Quantity (Leave blank if you don't want to change):
+-1
+Quantity cannot be negative.
+Enter the Item Quantity (Leave blank if you don't want to change):
+34
+Item updated successfully.
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option: 5
+Enter the item id to be deleted
+2
+Item deleted
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option: 2
+ID: 1, Name: face wash, Price: 100, Quantity: 2
+ID: 3, Name: oil, Price: 35, Quantity: 1
+
+Inventory Management System
+1. Add Item
+2. Display All Items
+3. Find Item by ID
+4. Update Item
+5. Delete Item
+6. Exit
+Select an option:6
