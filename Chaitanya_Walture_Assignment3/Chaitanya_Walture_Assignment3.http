@@ -1,0 +1,6 @@
+@Chaitanya_Walture_Assignment3_HostAddress = http://localhost:5029
+
+GET {{Chaitanya_Walture_Assignment3_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
