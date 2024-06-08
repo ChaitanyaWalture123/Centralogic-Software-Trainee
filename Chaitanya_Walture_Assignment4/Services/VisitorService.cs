@@ -2,6 +2,8 @@
 using Chaitanya_Walture_Assignment4.DTO;
 using Chaitanya_Walture_Assignment4.Entities;
 using Chaitanya_Walture_Assignment4.Interfaces;
+using SendGrid.Helpers.Mail;
+using SendGrid;
 
 namespace Chaitanya_Walture_Assignment4.Services
 {
@@ -51,6 +53,11 @@ namespace Chaitanya_Walture_Assignment4.Services
             requestDTO.EntryTime = existingRecord.EntryTime;
             requestDTO.ExitTime = existingRecord.ExitTime;
             requestDTO.Status = existingRecord.Status;
+
+            await SendStatusEmail(existingRecord.Email, existingRecord.Id, existingRecord.Name, existingRecord.EntryTime, existingRecord.ExitTime, existingRecord.Purpose, existingRecord.Status);
+
+
+
 
             return requestDTO;
 
@@ -177,8 +184,14 @@ namespace Chaitanya_Walture_Assignment4.Services
             responseModel.Purpose = visitor.Purpose;    
             responseModel.EntryTime = visitor.EntryTime;
             responseModel.ExitTime= visitor.ExitTime;
- 
+
+
+
+            await SendConfirmationEmail(visitorEntity.Email, visitorEntity.UId);
+
             return responseModel;
+
+
 
 
         }
@@ -242,9 +255,47 @@ namespace Chaitanya_Walture_Assignment4.Services
             requestDTO.ExitTime = existingRecord.ExitTime;
             requestDTO.Status = existingRecord.Status;
 
+            await SendStatusEmail(existingRecord.Email, existingRecord.Id, existingRecord.Name, existingRecord.EntryTime, existingRecord.ExitTime, existingRecord.Purpose, existingRecord.Status);
+
+
             return requestDTO;
 
 
         }
+
+        private async Task SendConfirmationEmail(string recipientEmail, string visitorId)
+        {
+            var apiKey = "AddApi Key Here";
+            var client = new SendGridClient(apiKey);
+            var from = new EmailAddress("tidkeshubham10@gmail.com", "Manager");
+            var subject = "Visit Application Submitted";
+            var to = new EmailAddress(recipientEmail, "Hello");
+            var plainTextContent = $"Your application is under review. Please keep an eye on your email for updated status. Your application ID is: {visitorId}";
+            var htmlContent = $"<strong>Your application is under review. Please keep an eye on your email for updated status.</strong> Your application ID is: {visitorId}";
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var response = await client.SendEmailAsync(msg);
+
+            Console.WriteLine(response.StatusCode);
+            var responseBody = await response.Body.ReadAsStringAsync();
+            Console.WriteLine(responseBody);
+        }
+
+        private async Task SendStatusEmail(string recipientEmail, string VisitorId, string Name, DateTime EntryTime, DateTime ExitTime, string Purpose, string Status)
+        {
+            var apiKey = "AddApi Key Here";
+            var client = new SendGridClient(apiKey);
+            var from = new EmailAddress("tidkeshubham10@gmail.com", "Manager");
+            var subject = "Visit Application Submitted";
+            var to = new EmailAddress(recipientEmail, "Hello");
+            var plainTextContent = $"Your application is {Status}. Your application ID is: {VisitorId} ,{Name} ,{EntryTime}, {ExitTime}, {Status}, {Purpose}";
+            var htmlContent = $"<strong>Your application {Status}.</strong> Your application ID is: {VisitorId} ,{Name} ,{EntryTime}, {ExitTime}, {Status}, {Purpose} {VisitorId}";
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var response = await client.SendEmailAsync(msg);
+
+            Console.WriteLine(response.StatusCode);
+            var responseBody = await response.Body.ReadAsStringAsync();
+            Console.WriteLine(responseBody);
+        }
+
     }
 }
