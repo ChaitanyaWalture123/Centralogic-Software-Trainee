@@ -2,21 +2,18 @@
 
 namespace Chaitanya_Walture_Assignment3.Entities
 {
-    public class MemberEntity
+    public class MemberEntity : BaseClass
     {
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
-        public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "uId", NullValueHandling = NullValueHandling.Ignore)]
-        public string UId { get; set; }
 
-        [JsonProperty(PropertyName = "name", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "Name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
 
-        [JsonProperty(PropertyName = "dateOfBirth", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "dateofbirth", NullValueHandling = NullValueHandling.Ignore)]
         public DateTime DateOfBirth { get; set; }
 
         [JsonProperty(PropertyName = "email", NullValueHandling = NullValueHandling.Ignore)]
         public string Email { get; set; }
+
     }
 }

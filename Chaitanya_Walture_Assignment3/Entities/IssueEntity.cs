@@ -2,27 +2,23 @@
 
 namespace Chaitanya_Walture_Assignment3.Entities
 {
-    public class IssueEntity
+    public class IssueEntity : BaseClass
     {
-        [JsonProperty(PropertyName = "id", NullValueHandling = NullValueHandling.Ignore)]
-        public string Id { get; set; }
 
-        [JsonProperty(PropertyName = "uId", NullValueHandling = NullValueHandling.Ignore)]
-        public string UId { get; set; }
 
-        [JsonProperty(PropertyName = "bookId", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "bookid", NullValueHandling = NullValueHandling.Ignore)]
         public string BookId { get; set; }
 
-        [JsonProperty(PropertyName = "memberId", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "memberid", NullValueHandling = NullValueHandling.Ignore)]
         public string MemberId { get; set; }
 
-        [JsonProperty(PropertyName = "issueDate", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty(PropertyName = "issuedate", NullValueHandling = NullValueHandling.Ignore)]
         public DateTime IssueDate { get; set; }
 
-        [JsonProperty(PropertyName = "returnDate", NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime? ReturnDate { get; set; }
+        [JsonProperty(PropertyName = "returndate", NullValueHandling = NullValueHandling.Ignore)]
+        public DateTime ReturnDate { get; set; }
 
-        [JsonProperty(PropertyName = "isReturned", NullValueHandling = NullValueHandling.Ignore)]
-        public bool IsReturned { get; set; }
+        [JsonProperty(PropertyName = "isreturned", NullValueHandling = NullValueHandling.Ignore)]
+        public bool isReturned { get; set; }
     }
 }
